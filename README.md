@@ -15,6 +15,8 @@ The repo has two contracts.
 - GoodContract - Contract A
 - BadContract - Contract B
 
+When the attack() function is triggered on BadContract, it call the withdraw() function on GoodContract. The BadContract has a receive() function which is triggers when it received the funds from GoodContract, essentially triggering a loop which drains all the funds from GoodContract.
+
 
 ## Requirements
 
